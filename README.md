@@ -125,7 +125,7 @@ WHERE player_name IN (
 GROUP BY player_name
 ORDER BY innings_played_cf DESC;
 ```
-Next, let's take a look at DRS. Let's adjust the DRS data we have by a full-season basis (1458 innings) and take the averages of both.
+Next, let's take a look at DRS. Let's adjust the DRS data we have on a full-season rate (1458 innings) and take the averages of both.
 
 ```
 SELECT
@@ -139,6 +139,6 @@ This group of outfielders have played 7.27 runs better in a corner position than
 
 ![image](https://github.com/user-attachments/assets/4ec1f82b-fc02-41c4-b001-70ab6144ab37)
 
-Here the gap is a bit smaller, with this group of outfielders having played just 5.3 runs better in a corner outfield position compared to centerfield. Fangraphs positional adjustments are also larger, with -7.5 runs each for both LF and RF and the same +2.5 runs in CF, meaning that we should expect the average difference to be about 10 runs. There's a larger gap of nearly 50% between real and expected values. Perhaps the positional adjustments are too harsh, but a potential explanatory factory could be that center fielders tend to be moved to the corners as they get older and past their prime (as Mike Trout is set to do in 2025), so by the time they have made the move they have already lost a step defensively. A deeper analysis should factor in age, but we'll get to that later.
+Here the gap is a bit smaller, with this group of outfielders having played just 5.3 runs better in a corner outfield position compared to centerfield. Fangraphs positional adjustments are also larger, with -7.5 runs each for both LF and RF and the same +2.5 runs in CF, meaning that we should expect the average difference to be about 10 runs. There's a larger gap of nearly 50% between real and expected values. Perhaps the positional adjustments are too harsh, but a potential explanatory factor could be that center fielders tend to be moved to the corners as they get older and past their prime (as Mike Trout is set to do in 2025), so by the time they have made the move they have already lost a step defensively. A deeper analysis should factor in age, but we'll get to that later.
 
 
