@@ -80,7 +80,7 @@ There are 72 total players that have enough innings to qualify for both conditio
 
 ```
 SELECT player_name, 
-	   ROUND(SUM(CASE WHEN pos = 'CF' THEN inn ELSE 0 END)::numeric,2) AS innings_played_cf,
+       ROUND(SUM(CASE WHEN pos = 'CF' THEN inn ELSE 0 END)::numeric,2) AS innings_played_cf,
        ROUND(SUM(CASE WHEN pos IN ('LF', 'RF') THEN inn ELSE 0 END)::numeric,2) AS innings_played_corner
 FROM fielding_stats
 WHERE player_name IN (
