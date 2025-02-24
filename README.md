@@ -46,7 +46,7 @@ CREATE TABLE fielding_stats (
 COPY fielding_stats FROM '/path/to/fielding_stats_last_20_seasons.csv' DELIMITER ',' CSV HEADER;
 
 -- Initial query to analyze DRS and UZR by position, filtering to qualified players (900 innings)
-and excluding P and C because no UZR data exists for these positions.
+-- and excluding P and C because no UZR data exists for these positions.
 SELECT 
 	pos, 
 	ROUND(AVG(drs),2) AS avg_drs,
